@@ -1,5 +1,6 @@
 {
     "name": "oh86/laravel-sm-ctyunkms",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Oh86\\CtyunKms\\": "src/"
@@ -15,7 +16,7 @@
         "oh86/sm_cryptor": "v2.0"
     },
     "require-dev": {
-        "laravel/framework": "^8.75"
+        "laravel/framework": "^7.0||^8.0||^9.0||^10.0"
     },
     "extra": {
         "laravel": {

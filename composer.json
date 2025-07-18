@@ -1,0 +1,27 @@
+{
+    "name": "oh86/laravel-sm-ctyunkms",
+    "autoload": {
+        "psr-4": {
+            "Oh86\\CtyunKms\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "chengj",
+            "email": "chen.gj@qq.com"
+        }
+    ],
+    "require": {
+        "oh86/sm_cryptor": "v2.0"
+    },
+    "require-dev": {
+        "laravel/framework": "^8.75"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Oh86\\CtyunKms\\CtyunKmsServiceProvider"
+            ]
+        }
+    }
+}

@@ -12,14 +12,14 @@ class UkeyImportCert extends Command
      *
      * @var string
      */
-    protected $signature = 'ctyunkms:ukey-import-cert {certificate} {ukeyName}';
+    protected $signature = 'ctyunkms:ukey-import-cert {certificate : 证书} {ukeyName : 证书名称，自定义}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = '导入UKey证书到CtyunKMS';
 
     /**
      * Create a new command instance.

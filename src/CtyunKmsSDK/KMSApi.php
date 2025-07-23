@@ -104,7 +104,7 @@ class KMSApi
         $response = $this->client->post('/manageCertificate/importCertificateForUK', [
             'algorithm' => $algorithm,
             'ukName' => $ukName,
-            'certificate' => $certificate,
+            'cert' => $certificate,
         ]);
 
         $this->assertResponseOk($response);
@@ -116,7 +116,7 @@ class KMSApi
      * Summary of certificatePublicKeyVerifyForUsbKey
      * @param string $algorithm  签名算法，与导入UK证书保持一致
      * @param string $certificateId  导入UK返回的证书ID
-     * @param string $msg   消息，Base64格式
+     * @param string $msg   消息
      * @param string $signature   需要验签的签名值
      * @return bool 
      * @throws KMSRequestException
@@ -126,7 +126,7 @@ class KMSApi
         $response = $this->client->post('/certificateCompute/certificatePublicKeyVerifyForUsbKey', [
             'algorithm' => $algorithm,
             'certificateId' => $certificateId,
-            'msg' => $msg,
+            'message' => $msg,
             'signatureValue' => $signature,
         ]);
 

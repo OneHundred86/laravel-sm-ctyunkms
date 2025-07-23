@@ -88,7 +88,7 @@ class CtyunKmsCryptor extends AbstractCryptor
     public function ukeyVerifySign(string $certificateId, string $text, string $sign): bool
     {
         try {
-            return $this->api->certificatePublicKeyVerifyForUsbKey($this->config['ukeyOptions']['algorithm'], $certificateId, base64_encode($text), $sign);
+            return $this->api->certificatePublicKeyVerifyForUsbKey($this->config['ukeyOptions']['algorithm'], $certificateId, $text, $sign);
         } catch (KMSRequestException $e) {
             Log::error(__METHOD__, $e->toArray());
             throw new SmCryptorException($e->getMessage());
